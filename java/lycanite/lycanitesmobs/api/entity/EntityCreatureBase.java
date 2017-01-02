@@ -479,7 +479,7 @@ public abstract class EntityCreatureBase extends EntityLiving implements FlyingM
     	if(this.spawnedFromType == null || (this.spawnedFromType != null && !this.spawnedFromType.ignoreLight)) {
             byte light = this.testLightLevel(i, j, k);
             boolean validLight = false;
-            Block spawnBlock = world.getBlock(i, j, k);
+//            Block spawnBlock = world.getBlock(i, j, k);
 
 	    	LycanitesMobs.printDebug("MobSpawns", "Checking light level: Darkness");
 	    	if(this.mobInfo.spawnInfo.spawnsInDark && light <= 1)
@@ -612,7 +612,7 @@ public abstract class EntityCreatureBase extends EntityLiving implements FlyingM
     // ========== Spawn Block Check ==========
     /** Checks for nearby blocks from the xyz block location, Cinders use this when spawning by Fire Blocks. **/
     public boolean spawnBlockCheck(World world, int x, int y, int z) {
-        if(this.spawnedFromType != null && this.mobInfo.spawnInfo.enforceBlockCost) {
+        if(this.spawnedFromType != null && SpawnInfo.enforceBlockCost) {
         	int blocksFound = 0;
         	if(this.spawnedFromType.materials != null) {
         		for(int i = x - this.spawnedFromType.range; i <= x + this.spawnedFromType.range; i++)

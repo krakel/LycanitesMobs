@@ -111,7 +111,7 @@ public class SpawnTypeUnderground extends SpawnTypeLand {
      * @return Returns a ChunkPosition or null if no coord was found.
      */
     public ChunkPosition getRandomUndergroundLandCoord(World world, ChunkPosition originPos, int range) {
-        int radius = Math.round(range * 0.5F);
+//        int radius = Math.round(range * 0.5F);
         int[] xz = this.getRandomXZCoord(world, originPos.chunkPosX, originPos.chunkPosZ, rangeMin, range);
         int x = xz[0];
         int z = xz[1];

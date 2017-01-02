@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class RenderProjectile extends Render {
-	private IIcon icon;
+//	private IIcon icon;
     private float scale;
     private int renderTime = 0;
     
@@ -116,9 +116,9 @@ public class RenderProjectile extends Render {
         GL11.glPopMatrix();
     }
     
-    private double func_110828_a(double par1, double par3, double par5) {
-        return par1 + (par3 - par1) * par5;
-    }
+//    private double func_110828_a(double par1, double par3, double par5) {
+//        return par1 + (par3 - par1) * par5;
+//    }
     
     
     // ==================================================
@@ -175,22 +175,22 @@ public class RenderProjectile extends Render {
     // ==================================================
     //                    Render Icon
     // ==================================================
-    private void renderIcon(Tessellator par1Tessellator, IIcon par2Icon) {
-        float f = par2Icon.getMinU();
-        float f1 = par2Icon.getMaxU();
-        float f2 = par2Icon.getMinV();
-        float f3 = par2Icon.getMaxV();
-        float f4 = 1.0F;
-        float f5 = 0.5F;
-        float f6 = 0.25F;
-        GL11.glRotatef(180.0F - this.renderManager.playerViewY, 0.0F, 1.0F, 0.0F);
-        GL11.glRotatef(-this.renderManager.playerViewX, 1.0F, 0.0F, 0.0F);
-        par1Tessellator.startDrawingQuads();
-        par1Tessellator.setNormal(0.0F, 1.0F, 0.0F);
-        par1Tessellator.addVertexWithUV((double)(0.0F - f5), (double)(0.0F - f6), 0.0D, (double)f, (double)f3);
-        par1Tessellator.addVertexWithUV((double)(f4 - f5), (double)(0.0F - f6), 0.0D, (double)f1, (double)f3);
-        par1Tessellator.addVertexWithUV((double)(f4 - f5), (double)(f4 - f6), 0.0D, (double)f1, (double)f2);
-        par1Tessellator.addVertexWithUV((double)(0.0F - f5), (double)(f4 - f6), 0.0D, (double)f, (double)f2);
-        par1Tessellator.draw();
-    }
+//    private void renderIcon(Tessellator par1Tessellator, IIcon par2Icon) {
+//        float f = par2Icon.getMinU();
+//        float f1 = par2Icon.getMaxU();
+//        float f2 = par2Icon.getMinV();
+//        float f3 = par2Icon.getMaxV();
+//        float f4 = 1.0F;
+//        float f5 = 0.5F;
+//        float f6 = 0.25F;
+//        GL11.glRotatef(180.0F - this.renderManager.playerViewY, 0.0F, 1.0F, 0.0F);
+//        GL11.glRotatef(-this.renderManager.playerViewX, 1.0F, 0.0F, 0.0F);
+//        par1Tessellator.startDrawingQuads();
+//        par1Tessellator.setNormal(0.0F, 1.0F, 0.0F);
+//        par1Tessellator.addVertexWithUV((double)(0.0F - f5), (double)(0.0F - f6), 0.0D, (double)f, (double)f3);
+//        par1Tessellator.addVertexWithUV((double)(f4 - f5), (double)(0.0F - f6), 0.0D, (double)f1, (double)f3);
+//        par1Tessellator.addVertexWithUV((double)(f4 - f5), (double)(f4 - f6), 0.0D, (double)f1, (double)f2);
+//        par1Tessellator.addVertexWithUV((double)(0.0F - f5), (double)(f4 - f6), 0.0D, (double)f, (double)f2);
+//        par1Tessellator.draw();
+//    }
 }

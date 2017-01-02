@@ -24,7 +24,7 @@ public class MobEventYule extends MobEventBase {
     // ==================================================
 	@Override
     public boolean canStart(World world, ExtendedWorld worldExt) {
-		Calendar calendar = Calendar.getInstance();
+//		Calendar calendar = Calendar.getInstance();
 		if(!Utilities.isYuletide())
 			return false;
         return super.isEnabled();

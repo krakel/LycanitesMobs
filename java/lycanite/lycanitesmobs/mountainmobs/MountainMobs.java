@@ -171,12 +171,12 @@ public class MountainMobs {
 	public void postInit(FMLPostInitializationEvent event) {
 		// ========== Set Current Group ==========
 		ObjectManager.setCurrentGroup(group);
-		ConfigBase config = ConfigBase.getConfig(group, "spawning");
+//		ConfigBase config = ConfigBase.getConfig(group, "spawning");
 		
 		
 		// ========== Mob Events ==========
         if(MobInfo.getFromName("geonach") != null) {
-			MobEventBase mobEvent = new MobEventBoulderDash("boulderdash", this.group);
+			MobEventBase mobEvent = new MobEventBoulderDash("boulderdash", MountainMobs.group);
 			SpawnTypeBase eventSpawner = new SpawnTypeSky("boulderdash")
 	            .setChance(1.0D).setBlockLimit(32).setMobLimit(3);
 	        eventSpawner.materials = new Material[] {Material.air};

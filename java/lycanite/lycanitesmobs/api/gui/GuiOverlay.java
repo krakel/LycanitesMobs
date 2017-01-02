@@ -215,7 +215,7 @@ public class GuiOverlay extends Gui {
 		            	ArrayList<EntityAITasks.EntityAITaskEntry> tasks;
 						EntityLiving el = (EntityLiving)entity;
 						tasks = (ArrayList)executingTasks.get(el.tasks);
-		            	String s = "";
+//		            	String s = "";
 		            	if (tasks.size() == 0)
 		            	{
 				            event.right.add("Main Task: idle");	            		
@@ -258,7 +258,7 @@ public class GuiOverlay extends Gui {
 	            }
 
 	            int x = MathHelper.floor_double(entity.posX);
-	            int y = MathHelper.floor_double(entity.posY);
+//	            int y = MathHelper.floor_double(entity.posY);
 	            int z = MathHelper.floor_double(entity.posZ);
 	            int rot = MathHelper.floor_double((double)(entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 	            int rot1 = MathHelper.floor_double((double)(entity.renderYawOffset * 4.0F / 360.0F) + 0.5D) & 3;

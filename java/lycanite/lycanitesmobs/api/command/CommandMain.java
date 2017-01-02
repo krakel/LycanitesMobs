@@ -154,8 +154,8 @@ public class CommandMain implements ICommand {
 
             LycanitesMobs.printDebug("", "Getting Extended World for Dimension: " + world.provider.dimensionId + " World: " + world);
             ExtendedWorld worldExt = ExtendedWorld.getForWorld(world);
-            LycanitesMobs.printDebug("", "Got Extended World for Dimension: " + worldExt.world.provider.dimensionId + " World: " + worldExt.world);
             if(worldExt == null) return;
+            LycanitesMobs.printDebug("", "Got Extended World for Dimension: " + worldExt.world.provider.dimensionId + " World: " + worldExt.world);
 			
 			// Random:
 			if("random".equalsIgnoreCase(args[1])) {

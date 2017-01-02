@@ -22,7 +22,7 @@ public class EntityDemonicBlast extends EntityProjectileBase {
 	
 	// Rapid Fire:
 	private int rapidTicks = 0;
-	private int rapidDelay = 5;
+//	private int rapidDelay = 5;
 	
     // ==================================================
  	//                   Constructors

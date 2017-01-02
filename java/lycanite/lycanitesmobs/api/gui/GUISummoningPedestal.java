@@ -129,7 +129,7 @@ public class GUISummoningPedestal extends GUIBaseManager {
         int buttonX = this.windowX + 6;
         int buttonY = this.windowY;
 
-        this.buttonList.add(new GUITabMain(this.tabButtonID, buttonX, buttonY - 24));
+        this.buttonList.add(new GUITabMain(GUIBaseManager.tabButtonID, buttonX, buttonY - 24));
 
         buttonX = this.centerX + buttonSpacing;
         int buttonXRight = buttonX + buttonWidth + buttonSpacing;

@@ -41,7 +41,7 @@ public class BlockSummoningPedestal extends BlockBase implements ITileEntityProv
 		this.setHardness(5F);
         this.setResistance(10F);
 		this.setHarvestLevel("pickaxe", 2);
-		this.setStepSound(this.soundTypeMetal);
+		this.setStepSound(Block.soundTypeMetal);
 
         // Tile Entity:
         this.isBlockContainer = true;

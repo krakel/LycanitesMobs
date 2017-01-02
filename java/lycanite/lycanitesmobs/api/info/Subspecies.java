@@ -13,7 +13,8 @@ public class Subspecies {
     public static int baseSpeciesWeight = 400;
 
     /** Common weights used by most subspecies. **/
-    public static Map<String, Integer> commonWeights = new HashMap<String, Integer>() {{
+    @SuppressWarnings( "serial")
+	public static Map<String, Integer> commonWeights = new HashMap<String, Integer>() {{
     	put("common", 100);
     	put("uncommon", 20);
     	put("rare", 5);

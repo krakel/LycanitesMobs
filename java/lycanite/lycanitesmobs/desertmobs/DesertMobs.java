@@ -195,10 +195,10 @@ public class DesertMobs {
 	public void postInit(FMLPostInitializationEvent event) {
 		// ========== Set Current Group ==========
 		ObjectManager.setCurrentGroup(group);
-		ConfigBase config = ConfigBase.getConfig(group, "spawning");
+//		ConfigBase config = ConfigBase.getConfig(group, "spawning");
 		
 		// ========== Mob Events ==========
-        MobEventBase mobEvent = new MobEventMarchOfTheGorgomites("marchofthegorgomites", this.group);
+        MobEventBase mobEvent = new MobEventMarchOfTheGorgomites("marchofthegorgomites", DesertMobs.group);
         mobEvent.minDay = 10;
         SpawnTypeBase eventSpawner = new SpawnTypeLand("marchofthegorgomites")
             .setChance(1.0D).setBlockLimit(32).setMobLimit(8);
@@ -211,7 +211,7 @@ public class DesertMobs {
         mobEvent.addSpawner(eventSpawner);
         MobEventManager.instance.addWorldEvent(mobEvent);
 
-        mobEvent = new MobEventBladeFlurry("bladeflurry", this.group);
+        mobEvent = new MobEventBladeFlurry("bladeflurry", DesertMobs.group);
         eventSpawner = new SpawnTypeLand("bladeflurry")
                 .setChance(1.0D).setBlockLimit(32).setMobLimit(8);
         eventSpawner.materials = new Material[] {Material.air};

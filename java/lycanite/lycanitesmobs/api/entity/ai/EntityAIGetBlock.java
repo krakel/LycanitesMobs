@@ -22,8 +22,8 @@ public class EntityAIGetBlock extends EntityAIBase {
 	// Properties:
     private int distanceMax = 8;
     double speed = 1.0D;
-    private boolean checkSight = true;
-    private int cantSeeTime = 0;
+//    private boolean checkSight = true;
+//    private int cantSeeTime = 0;
     protected int cantSeeTimeMax = 60;
     private int updateRate = 0;
     public Block targetBlock = Blocks.torch;
@@ -55,7 +55,7 @@ public class EntityAIGetBlock extends EntityAIBase {
     }
     
     public EntityAIGetBlock setCheckSight(boolean setBool) {
-    	this.checkSight = setBool;
+//    	this.checkSight = setBool;
     	return this;
     }
     

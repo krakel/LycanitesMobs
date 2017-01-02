@@ -70,12 +70,12 @@ public class SpawnTypeDarkness extends SpawnTypeBase {
 
         ChunkCoordinates playerCoords = player.getPlayerCoordinates();
         Block block = world.getBlock(playerCoords.posX, playerCoords.posY, playerCoords.posZ);
-        boolean isValidBlock = block != null;
-        if(isValidBlock)
+        boolean isValidBlock = false;
+        if(block != null) {
             isValidBlock = !block.isNormalCube();
-        if(isValidBlock)
-            isValidBlock = block.getMaterial() != Material.water;
-
+	        if(isValidBlock)
+	            isValidBlock = block.getMaterial() != Material.water;
+        }
         if(!player.capabilities.isCreativeMode && isValidBlock && tick % this.checkRate == 0 && this.enabled && this.hasSpawns()) {
 			int lightLevel = world.getBlockLightValue(playerCoords.posX, playerCoords.posY, playerCoords.posZ);
 			byte darknessLevel = 0;

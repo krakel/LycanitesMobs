@@ -139,13 +139,13 @@ public class EntityKobold extends EntityCreatureTameable implements IMob, IGroup
 	        	this.torchLootingTime = 60;
 	        	int distance = 2;
 	        	String targetName = "torch";
-	        	List possibleTargets = new ArrayList<ChunkCoordinates>();
+//	        	List possibleTargets = new ArrayList<ChunkCoordinates>();
 	            for(int x = (int)this.posX - distance; x < (int)this.posX + distance; x++) {
 	            	for(int y = (int)this.posY - distance; y < (int)this.posY + distance; y++) {
 	            		for(int z = (int)this.posZ - distance; z < (int)this.posZ + distance; z++) {
 	            			Block searchBlock = this.worldObj.getBlock(x, y, z);
 	                    	if(searchBlock != null && searchBlock != Blocks.air) {
-	                    		ChunkCoordinates possibleTarget = null;
+//	                    		ChunkCoordinates possibleTarget = null;
 	                			if(ObjectLists.isName(searchBlock, targetName)) {
 	                				this.worldObj.func_147480_a(x, y, z, true); //destroyBlock()
 	                				break;

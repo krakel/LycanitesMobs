@@ -55,7 +55,7 @@ public class ModelLurker extends ModelCustomObj {
     @Override
     public void animatePart(String partName, EntityLiving entity, float time, float distance, float loop, float lookY, float lookX, float scale) {
     	super.animatePart(partName, entity, time, distance, loop, lookY, lookX, scale);
-    	float pi = (float)Math.PI;
+    	// float pi = (float)Math.PI;
     	float posX = 0F;
     	float posY = 0F;
     	float posZ = 0F;

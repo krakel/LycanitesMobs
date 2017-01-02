@@ -80,7 +80,7 @@ public class EntityAIFollowOwner extends EntityAIFollow {
 	
 	        for(int l = 0; l <= 4; ++l) {
 	            for(int i1 = 0; i1 <= 4; ++i1) {
-	                if((l < 1 || i1 < 1 || l > 3 || i1 > 3) && this.host.worldObj.doesBlockHaveSolidTopSurface(world, i + l, j - 1, k + i1) && !this.host.worldObj.isBlockNormalCubeDefault(i + l, j, k + i1, true) && !this.host.worldObj.isBlockNormalCubeDefault(i + l, j + 1, k + i1, true)) {
+	                if((l < 1 || i1 < 1 || l > 3 || i1 > 3) && World.doesBlockHaveSolidTopSurface(world, i + l, j - 1, k + i1) && !this.host.worldObj.isBlockNormalCubeDefault(i + l, j, k + i1, true) && !this.host.worldObj.isBlockNormalCubeDefault(i + l, j + 1, k + i1, true)) {
 	                    this.host.setLocationAndAngles((double)((float)(i + l) + 0.5F), (double)j, (double)((float)(k + i1) + 0.5F), this.host.rotationYaw, this.host.rotationPitch);
 	                    this.host.clearMovement();
 	                    return;

@@ -53,7 +53,7 @@ public class Utilities {
 	// ========== Raytrace All ==========
     public static MovingObjectPosition raytrace(World world, double x, double y, double z, double tx, double ty, double tz, float borderSize, HashSet<Entity> excluded) {
 		Vec3 startVec = Vec3.createVectorHelper(x, y, z);
-		Vec3 lookVec = Vec3.createVectorHelper(tx - x, ty - y, tz - z);
+//		Vec3 lookVec = Vec3.createVectorHelper(tx - x, ty - y, tz - z);
 		Vec3 endVec = Vec3.createVectorHelper(tx, ty, tz);
 		float minX = (float)(x < tx ? x : tx);
 		float minY = (float)(y < ty ? y : ty);
@@ -66,9 +66,9 @@ public class Utilities {
 		MovingObjectPosition collision = world.rayTraceBlocks(startVec, endVec, false);
 		startVec = Vec3.createVectorHelper(x, y, z);
 		endVec = Vec3.createVectorHelper(tx, ty, tz);
-		float maxDistance = (float)endVec.distanceTo(startVec);
-		if(collision != null)
-			maxDistance = (float)collision.hitVec.distanceTo(startVec);
+//		float maxDistance = (float)endVec.distanceTo(startVec);
+//		if(collision != null)
+//			maxDistance = (float)collision.hitVec.distanceTo(startVec);
 
 		// Get Entity Collision:
 		if(excluded != null) {
@@ -105,7 +105,7 @@ public class Utilities {
 
     public static MovingObjectPosition raytraceEntities(World world, double x, double y, double z, double tx, double ty, double tz, float borderSize, HashSet<Entity> excluded) {
 		Vec3 startVec = Vec3.createVectorHelper(x, y, z);
-		Vec3 lookVec = Vec3.createVectorHelper(tx - x, ty - y, tz - z);
+//		Vec3 lookVec = Vec3.createVectorHelper(tx - x, ty - y, tz - z);
 		Vec3 endVec = Vec3.createVectorHelper(tx, ty, tz);
 		float minX = (float)(x < tx ? x : tx);
 		float minY = (float)(y < ty ? y : ty);
@@ -154,8 +154,8 @@ public class Utilities {
   	// ==================================================
     public static boolean isHalloween() {
     	Calendar calendar = Calendar.getInstance();
-		if(		(calendar.get(Calendar.DAY_OF_MONTH) == 31 && calendar.get(Calendar.MONTH) == calendar.OCTOBER)
-			||	(calendar.get(Calendar.DAY_OF_MONTH) == 1 && calendar.get(Calendar.MONTH) == calendar.NOVEMBER)
+		if(		(calendar.get(Calendar.DAY_OF_MONTH) == 31 && calendar.get(Calendar.MONTH) == Calendar.OCTOBER)
+			||	(calendar.get(Calendar.DAY_OF_MONTH) == 1 && calendar.get(Calendar.MONTH) == Calendar.NOVEMBER)
 		)
 			return true;
 		return false;
@@ -163,16 +163,16 @@ public class Utilities {
 
     public static boolean isYuletide() {
     	Calendar calendar = Calendar.getInstance();
-		return calendar.get(Calendar.MONTH) == calendar.DECEMBER && calendar.get(Calendar.DAY_OF_MONTH) > 9 && calendar.get(Calendar.DAY_OF_MONTH) < 26;
+		return calendar.get(Calendar.MONTH) == Calendar.DECEMBER && calendar.get(Calendar.DAY_OF_MONTH) > 9 && calendar.get(Calendar.DAY_OF_MONTH) < 26;
     }
 
     public static boolean isYuletideDay() {
         Calendar calendar = Calendar.getInstance();
-        return calendar.get(Calendar.MONTH) == calendar.DECEMBER && calendar.get(Calendar.DAY_OF_MONTH) == 25;
+        return calendar.get(Calendar.MONTH) == Calendar.DECEMBER && calendar.get(Calendar.DAY_OF_MONTH) == 25;
     }
 
     public static boolean isNewYear() {
     	Calendar calendar = Calendar.getInstance();
-		return calendar.get(Calendar.MONTH) == calendar.JANUARY && calendar.get(Calendar.DAY_OF_MONTH) == 1;
+		return calendar.get(Calendar.MONTH) == Calendar.JANUARY && calendar.get(Calendar.DAY_OF_MONTH) == 1;
     }
 }

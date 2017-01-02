@@ -12,7 +12,7 @@ public class EntityAITargetRevenge extends EntityAITargetAttack {
     boolean callForHelp = false;
     Class[] helpClasses = null;
     private int revengeTime;
-    private boolean tameTargeting = true;
+//    private boolean tameTargeting = true;
 	
 	// ==================================================
  	//                    Constructor

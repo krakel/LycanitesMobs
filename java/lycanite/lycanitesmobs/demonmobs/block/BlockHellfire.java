@@ -119,7 +119,7 @@ public class BlockHellfire extends BlockBase {
         
 		// Turn to air if no neighbor blocks can burn and this block is not on a solid block.
         if(!onFireFuel && !this.canNeighborBurn(world, x, y, z)) {
-            if(!world.doesBlockHaveSolidTopSurface(world, x, y - 1, z) || metadata > 3) {
+            if(!World.doesBlockHaveSolidTopSurface(world, x, y - 1, z) || metadata > 3) {
                 world.setBlockToAir(x, y, z);
                 return;
             }

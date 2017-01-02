@@ -196,7 +196,7 @@ public class GUIBeastiary extends GuiScreen {
   	// ==================================================
 	protected void drawControls() {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        int buttonSpacing = 2;
+//        int buttonSpacing = 2;
         int buttonWidth = 128;
         int buttonHeight = 20;
         int buttonX = this.windowX + 6;

@@ -181,7 +181,7 @@ public class InfernoMobs {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		// ========== Set Current Group ==========
-		ObjectManager.setCurrentGroup(this.group);
+		ObjectManager.setCurrentGroup(InfernoMobs.group);
 
 
         // ========== World Generation ==========
@@ -189,7 +189,7 @@ public class InfernoMobs {
 
 
 		// ========== Mob Events ==========
-        MobEventBase mobEvent = new MobEventCinderfall("cinderfall", this.group).setDimensions("1");
+        MobEventBase mobEvent = new MobEventCinderfall("cinderfall", InfernoMobs.group).setDimensions("1");
         SpawnTypeBase eventSpawner = new SpawnTypeSky("cinderfall")
                 .setChance(1.0D).setBlockLimit(32).setMobLimit(3);
         eventSpawner.materials = new Material[] {Material.air};
@@ -201,7 +201,7 @@ public class InfernoMobs {
         mobEvent.addSpawner(eventSpawner);
         MobEventManager.instance.addWorldEvent(mobEvent);
 
-        mobEvent = new MobEventEruption("eruption", this.group).setDimensions("1");
+        mobEvent = new MobEventEruption("eruption", InfernoMobs.group).setDimensions("1");
         mobEvent.minDay = 10;
         eventSpawner = new SpawnTypeLand("eruption")
                 .setChance(1.0D).setBlockLimit(32).setMobLimit(3);

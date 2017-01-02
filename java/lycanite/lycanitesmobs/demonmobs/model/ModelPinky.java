@@ -262,7 +262,7 @@ public class ModelPinky extends ModelBipedCustom {
     @Override
     public void animate(EntityLiving entity, float time, float distance, float loop, float lookY, float lookX, float scale) {
     	super.animate(entity, time, distance, loop, lookY, lookX, scale);
-    	float pi = (float)Math.PI;
+    	// float pi = (float)Math.PI;
 
         // Custom Mob Check:
         if(!(entity instanceof EntityCreatureBase)) return;

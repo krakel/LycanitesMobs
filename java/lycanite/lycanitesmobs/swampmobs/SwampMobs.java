@@ -191,11 +191,11 @@ public class SwampMobs {
 	public void postInit(FMLPostInitializationEvent event) {
 		// ========== Set Current Group ==========
 		ObjectManager.setCurrentGroup(group);
-		ConfigBase config = ConfigBase.getConfig(group, "spawning");
+//		ConfigBase config = ConfigBase.getConfig(group, "spawning");
 		
 		// ========== Mob Events ==========
         if(MobInfo.getFromName("remobra") != null) {
-			MobEventBase mobEvent = new MobEventWindStorm("wingedvenom", this.group);
+			MobEventBase mobEvent = new MobEventWindStorm("wingedvenom", SwampMobs.group);
 			SpawnTypeBase eventSpawner = new SpawnTypeSky("wingedvenom")
 	            .setChance(1.0D).setBlockLimit(32).setMobLimit(3);
 	        eventSpawner.materials = new Material[] {Material.air};

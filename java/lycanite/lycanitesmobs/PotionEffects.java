@@ -67,9 +67,9 @@ public class PotionEffects {
 
         // ========== Swiftswimming ==========
         if(ObjectManager.getPotionEffect("swiftswimming") != null && entity instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer)entity;
+//            EntityPlayer player = (EntityPlayer)entity;
             if(entity.isPotionActive(ObjectManager.getPotionEffect("swiftswimming").getId()) && entity.isInWater()) {
-                int amplifier = entity.getActivePotionEffect(ObjectManager.getPotionEffect("swiftswimming")).getAmplifier();
+//                int amplifier = entity.getActivePotionEffect(ObjectManager.getPotionEffect("swiftswimming")).getAmplifier();
                 IAttributeInstance movement = entity.getEntityAttribute(SharedMonsterAttributes.movementSpeed);
                 if(movement.getModifier(swiftswimmingMoveBoostUUID) == null) {
                     movement.applyModifier(swiftswimmingMoveBoost);

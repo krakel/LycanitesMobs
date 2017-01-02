@@ -94,12 +94,12 @@ public class MobEventRahovart extends MobEventBoss {
     //                     Arena Floor
     // ==================================================
     public void buildArena(World world, int originX, int originY, int originZ) {
-        double rubbleChance = 0.01D;
+//        double rubbleChance = 0.01D;
         int radius = 60;
         int height = 120;
         Block primaryBlock = ObjectManager.getBlock("demontile");
-        Block secondaryBlock = ObjectManager.getBlock("demoncrystal");
-        double secondaryChance = 0.01D;
+//        Block secondaryBlock = ObjectManager.getBlock("demoncrystal");
+//        double secondaryChance = 0.01D;
 
         int stripNumber = 1;
         for(int x = originX - radius; x < originX + radius; x++) {
@@ -111,9 +111,9 @@ public class MobEventRahovart extends MobEventBoss {
             for(int z = originZ - stripRadius; z < originZ + stripRadius; z++) {
                 int y = originY;
                 // Build Floor:
-                Block buildBlock = primaryBlock;
-                if(world.rand.nextDouble() > secondaryChance)
-                    buildBlock = secondaryBlock;
+//                Block buildBlock = primaryBlock;
+//                if(world.rand.nextDouble() > secondaryChance)
+//                    buildBlock = secondaryBlock;
                 world.setBlock(x, y, z, primaryBlock, 0, 2);
                 world.setBlock(x, y - 1, z, primaryBlock, 0, 2);
                 world.setBlock(x, y - 2, z, primaryBlock, 0, 2);

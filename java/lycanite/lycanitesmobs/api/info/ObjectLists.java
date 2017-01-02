@@ -337,7 +337,7 @@ public class ObjectLists {
 
             // Check Tinkers Tool:
             String[] toolNameParts = item.getUnlocalizedName().split("\\.");
-            for(String toolNamePart : toolNameParts)
+//            for(String toolNamePart : toolNameParts)
             if(toolNameParts.length >= 3 && "InfiTool".equalsIgnoreCase(toolNameParts[1])) {
                 String toolName = toolNameParts[2];
                 if("Axe".equalsIgnoreCase(toolName) || "LumberAxe".equalsIgnoreCase(toolName) || "Mattock".equalsIgnoreCase(toolName) || "Battleaxe".equalsIgnoreCase(toolName))

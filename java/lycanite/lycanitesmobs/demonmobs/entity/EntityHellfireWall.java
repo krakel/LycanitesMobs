@@ -77,14 +77,14 @@ public class EntityHellfireWall extends EntityProjectileBase {
     public void onUpdate() {
         super.onUpdate();
 
-        Vec3 vec3 = Vec3.createVectorHelper(this.posX, this.posY, this.posZ);
-        Vec3 vec31 = Vec3.createVectorHelper(this.posX + this.motionX, this.posY + this.motionY, this.posZ + this.motionZ);
-        MovingObjectPosition movingobjectposition = this.worldObj.rayTraceBlocks(vec3, vec31);
+//        Vec3 vec3 = Vec3.createVectorHelper(this.posX, this.posY, this.posZ);
+//        Vec3 vec31 = Vec3.createVectorHelper(this.posX + this.motionX, this.posY + this.motionY, this.posZ + this.motionZ);
+//        MovingObjectPosition movingobjectposition = this.worldObj.rayTraceBlocks(vec3, vec31);
 
         if (!this.worldObj.isRemote) {
             List list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.addCoord(this.motionX, this.motionY, this.motionZ).expand(1.0D, 1.0D, 1.0D));
-            double d0 = 0.0D;
-            EntityLivingBase entitylivingbase = this.getThrower();
+//            double d0 = 0.0D;
+//            EntityLivingBase entitylivingbase = this.getThrower();
 
             for (int j = 0; j < list.size(); ++j) {
                 Entity entity = (Entity)list.get(j);

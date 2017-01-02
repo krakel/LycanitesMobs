@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemScepter extends ItemBase {
-    private float damageScale = 1.0F;
+//    private float damageScale = 1.0F;
     private int weaponFlash = 0;
 	
 	// ==================================================

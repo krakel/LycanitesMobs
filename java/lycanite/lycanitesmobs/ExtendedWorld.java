@@ -62,8 +62,8 @@ public class ExtendedWorld extends WorldSavedData {
             return worldExt;
         }
 
-        if (world.MAX_ENTITY_RADIUS < 50)
-            world.MAX_ENTITY_RADIUS = 50;
+        if (World.MAX_ENTITY_RADIUS < 50)
+            World.MAX_ENTITY_RADIUS = 50;
 		WorldSavedData worldSavedData = world.perWorldStorage.loadData(ExtendedWorld.class, EXT_PROP_NAME); //world.loadItemData(ExtendedWorld.class, EXT_PROP_NAME);
 		if(worldSavedData != null) {
 			worldExt = (ExtendedWorld)worldSavedData;
@@ -214,9 +214,9 @@ public class ExtendedWorld extends WorldSavedData {
         if(eventSchedule == null)
             return null;
 
-        int dimensionID = 0;
-        if(this.world.provider != null)
-            dimensionID = this.world.provider.dimensionId;
+//        int dimensionID = 0;
+//        if(this.world.provider != null)
+//            dimensionID = this.world.provider.dimensionId;
 
         int currentDay = (int)Math.floor((this.useTotalWorldTime ? this.world.getTotalWorldTime() : this.world.getWorldTime()) / 24000D);
         int currentMin = (int)((long)Math.floor((this.useTotalWorldTime ? this.world.getTotalWorldTime() : this.world.getWorldTime()) / 1200D) % 20);

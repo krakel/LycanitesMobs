@@ -145,7 +145,7 @@ public class FreshwaterMobs {
 		
 		// ========== Mob Events ==========
         if(MobInfo.getFromName("jengu") != null || MobInfo.getFromName("zephyr") != null) {
-			MobEventBase mobEvent = new MobEventTsunami("tsunami", this.group);
+			MobEventBase mobEvent = new MobEventTsunami("tsunami", FreshwaterMobs.group);
 			SpawnTypeBase eventSpawner = new SpawnTypeSky("tsunami")
 	            .setChance(1.0D).setBlockLimit(32).setMobLimit(3);
 	        eventSpawner.materials = new Material[] {Material.air};

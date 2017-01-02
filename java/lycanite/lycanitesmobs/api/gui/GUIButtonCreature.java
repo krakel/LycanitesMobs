@@ -38,8 +38,8 @@ public class GUIButtonCreature extends GuiButton {
             this.field_146123_n = mouseX >= this.xPosition && mouseY >= this.yPosition && mouseX < this.xPosition + this.width && mouseY < this.yPosition + this.height;
             int hoverState = this.getHoverState(this.field_146123_n);
             
-            int buttonW = this.width;
-            int buttonH = this.height;
+//            int buttonW = this.width;
+//            int buttonH = this.height;
             int buttonX = this.xPosition;
             int buttonY = this.yPosition;
             minecraft.getTextureManager().bindTexture(AssetManager.getTexture("GUIInventoryCreature"));

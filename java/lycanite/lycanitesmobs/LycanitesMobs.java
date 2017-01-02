@@ -105,7 +105,7 @@ public class LycanitesMobs {
         }
         ExtendedEntity.FORCE_REMOVE_ENTITY_TICKS = config.getInt("Admin", "Force Remove Entity Ticks", 40, "How many ticks it takes for an entity to be forcefully removed (1 second = 20 ticks). This only applies to EntityLiving, other entities are instantly removed.");
 
-		this.packetHandler.init();
+		LycanitesMobs.packetHandler.init();
 		
 		
 		// ========== Custom Potion Effects ==========
@@ -211,7 +211,7 @@ public class LycanitesMobs {
 		// ========== Register Special Entities ==========
 		int specialEntityID = 0;
 		EntityRegistry.registerModEntity(EntityPortal.class, "summoningportal", specialEntityID++, instance, 64, 1, true);
-		MobInfo newMob = new MobInfo(group, "fear", EntityFear.class, 0x000000, 0x000000)
+		/*MobInfo newMob =*/ new MobInfo(group, "fear", EntityFear.class, 0x000000, 0x000000)
 			.setPeaceful(true).setSummonable(false).setSummonCost(0).setDungeonLevel(0).setDummy(true);
 		EntityRegistry.registerModEntity(EntityFear.class, "fear", specialEntityID++, instance, 64, 1, true);
 		AssetManager.addSound("effect_fear", group, "effect.fear");
@@ -241,7 +241,7 @@ public class LycanitesMobs {
 		
 		
 		// ========== Mob Events ==========
-        SharedMobEvents.createSharedEvents(this.group);
+        SharedMobEvents.createSharedEvents(LycanitesMobs.group);
 
 
         // ========== Seasonal Item Lists ==========

@@ -109,9 +109,10 @@ public class EntityListCustom {
                 entity.readFromNBT(par0NBTTagCompound);
             }
             catch (Exception e) {
-            	FMLLog.log(Level.ERROR, e,
-                        "An Entity %s(%s) has thrown an exception during loading, its state cannot be restored. Report this to the mod author",
-                        par0NBTTagCompound.getString("id"), oclass.getName());
+            	if (oclass != null)
+	            	FMLLog.log(Level.ERROR, e,
+	                        "An Entity %s(%s) has thrown an exception during loading, its state cannot be restored. Report this to the mod author",
+	                        par0NBTTagCompound.getString("id"), oclass.getName());
                 entity = null;
             }
         }
@@ -183,7 +184,8 @@ public class EntityListCustom {
         public final int primaryColor;
         /** Color of the egg spots */
         public final int secondaryColor;
-        private static final String __OBFID = "CL_00001539";
+        @SuppressWarnings( "unused")
+		private static final String __OBFID = "CL_00001539";
 
         public EntityEggInfo(int par1, int par2, int par3)
         {

@@ -102,7 +102,7 @@ public class BlockFluidOoze extends BlockFluidClassic {
     @Override
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(World world, int x, int y, int z, Random random) {
-    	int l;
+//    	int l;
         float f; 
         float f1;
         float f2;

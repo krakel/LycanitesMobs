@@ -652,44 +652,44 @@ public class SpawnTypeBase {
                     LycanitesMobs.printDebug("CustomSpawner", possibleSpawn.mobInfo.name + ": Spawn Wave Limit reached for this mob.");
         		}
         	}
-        	
-        	// Check If Enabled:
-        	boolean isEnabled = withinWaveLimit;
-        	if(!isEnabled || possibleSpawn == null || !possibleSpawn.mobInfo.mobEnabled || !possibleSpawn.enabled
-					|| possibleSpawn.spawnWeight <= 0 || possibleSpawn.spawnGroupMax <= 0) {
-                LycanitesMobs.printDebug("CustomSpawner", possibleSpawn.mobInfo.name + ": Not enabled, will not spawn.");
-        		isEnabled = false;
-        	}
-        	
-        	// Check Coordinate Count:
-            boolean enoughCoords = true;
-            if(coordsFound < possibleSpawn.spawnBlockCost) {
-                LycanitesMobs.printDebug("CustomSpawner", possibleSpawn.mobInfo.name + ": Not enough of the required blocks available for spawning.");
-                enoughCoords = false;
-            }
-            
-            // Check Biomes:
-            boolean isValidBiome = this.ignoreBiome || possibleSpawn.ignoreBiome;
-            if(enoughCoords && !isValidBiome) {
-                for(BiomeGenBase validBiome : possibleSpawn.biomes) {
-                    for(BiomeGenBase targetBiome : biomes) {
-                        if(targetBiome == validBiome) {
-                            isValidBiome = true;
-                            break;
-                        }
-                    }
-                    if(isValidBiome)
-                        break;
+
+            if (possibleSpawn != null) {
+            	// Check If Enabled:
+            	boolean isEnabled = withinWaveLimit;
+            	if(!isEnabled || !possibleSpawn.mobInfo.mobEnabled || !possibleSpawn.enabled
+    					|| possibleSpawn.spawnWeight <= 0 || possibleSpawn.spawnGroupMax <= 0) {
+            		LycanitesMobs.printDebug("CustomSpawner", possibleSpawn.mobInfo.name + ": Not enabled, will not spawn.");
+            		isEnabled = false;
+            	}
+            	// Check Coordinate Count:
+                boolean enoughCoords = true;
+                if(coordsFound < possibleSpawn.spawnBlockCost) {
+                    LycanitesMobs.printDebug("CustomSpawner", possibleSpawn.mobInfo.name + ": Not enough of the required blocks available for spawning.");
+                    enoughCoords = false;
                 }
-            }
-            if(!isValidBiome)
-                LycanitesMobs.printDebug("CustomSpawner", possibleSpawn.mobInfo.name + ": No valid spawning biomes could be found within the coordinates.");
-            
-            // Add If Valid:
-            if(isEnabled && enoughCoords && isValidBiome) {
-                LycanitesMobs.printDebug("CustomSpawner", possibleSpawn.mobInfo.name + ": Able to spawn.");
-                possibleSpawns.add(possibleSpawn);
-            }
+                // Check Biomes:
+                boolean isValidBiome = this.ignoreBiome || possibleSpawn.ignoreBiome;
+                if(enoughCoords && !isValidBiome) {
+                    for(BiomeGenBase validBiome : possibleSpawn.biomes) {
+                        for(BiomeGenBase targetBiome : biomes) {
+                            if(targetBiome == validBiome) {
+                                isValidBiome = true;
+                                break;
+                            }
+                        }
+                        if(isValidBiome)
+                            break;
+                    }
+                }
+                if(!isValidBiome)
+                    LycanitesMobs.printDebug("CustomSpawner", possibleSpawn.mobInfo.name + ": No valid spawning biomes could be found within the coordinates.");
+                
+                // Add If Valid:
+                if(isEnabled && enoughCoords && isValidBiome) {
+                    LycanitesMobs.printDebug("CustomSpawner", possibleSpawn.mobInfo.name + ": Able to spawn.");
+                    possibleSpawns.add(possibleSpawn);
+                }
+        	}
         }
         return possibleSpawns;
     }
@@ -807,7 +807,7 @@ public class SpawnTypeBase {
      * @return Returns a ChunkPosition or null if no coord was found.
      */
     public ChunkPosition getRandomLandCoord(World world, ChunkPosition originPos, int range) {
-        int radius = Math.round(range * 0.5F);
+//        int radius = Math.round(range * 0.5F);
         int[] xz = this.getRandomXZCoord(world, originPos.chunkPosX, originPos.chunkPosZ, rangeMin, range);
         int x = xz[0];
         int z = xz[1];
@@ -824,7 +824,7 @@ public class SpawnTypeBase {
      * @return Returns a ChunkPosition or null if no coord was found.
      */
     public ChunkPosition getRandomWaterCoord(World world, ChunkPosition originPos, int range) {
-        int radius = Math.round(range * 0.5F);
+//        int radius = Math.round(range * 0.5F);
         int[] xz = this.getRandomXZCoord(world, originPos.chunkPosX, originPos.chunkPosZ, rangeMin, range);
         int x = xz[0];
         int z = xz[1];
@@ -842,7 +842,7 @@ public class SpawnTypeBase {
      * @return Returns a ChunkPosition or null if no coord was found.
      */
     public ChunkPosition getRandomSkyCoord(World world, ChunkPosition originPos, int range) {
-        int radius = Math.round(range * 0.5F);
+//        int radius = Math.round(range * 0.5F);
         int[] xz = this.getRandomXZCoord(world, originPos.chunkPosX, originPos.chunkPosZ, rangeMin, range);
         int x = xz[0];
         int z = xz[1];

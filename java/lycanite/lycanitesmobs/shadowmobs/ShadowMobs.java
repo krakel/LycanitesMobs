@@ -194,11 +194,11 @@ public class ShadowMobs {
 	public void postInit(FMLPostInitializationEvent event) {
 		// ========== Set Current Group ==========
 		ObjectManager.setCurrentGroup(group);
-		ConfigBase config = ConfigBase.getConfig(group, "spawning");
+//		ConfigBase config = ConfigBase.getConfig(group, "spawning");
 		
 		
 		// ========== Mob Events ==========
-		MobEventBase mobEvent = new MobEventShadowGames("shadowgames", this.group).setDimensions("-1");
+		MobEventBase mobEvent = new MobEventShadowGames("shadowgames", ShadowMobs.group).setDimensions("-1");
 		mobEvent.minDay = 10;
 		SpawnTypeBase eventSpawner = new SpawnTypeSky("shadowgames_sky")
             .setChance(1.0D).setBlockLimit(32).setMobLimit(3);
@@ -222,7 +222,7 @@ public class ShadowMobs {
         mobEvent.addSpawner(eventSpawner);
         MobEventManager.instance.addWorldEvent(mobEvent);
 
-        mobEvent = new MobEventBlackPlague("blackplague", this.group).setDimensions("-1");
+        mobEvent = new MobEventBlackPlague("blackplague", ShadowMobs.group).setDimensions("-1");
         mobEvent.minDay = 10;
         eventSpawner = new SpawnTypeLand("blackplague")
                 .setChance(1.0D).setBlockLimit(32).setMobLimit(8);

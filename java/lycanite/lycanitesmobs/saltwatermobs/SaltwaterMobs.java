@@ -146,7 +146,7 @@ public class SaltwaterMobs {
 		
 		// ========== Mob Events ==========
         if(MobInfo.getFromName("raiko") != null) {
-			MobEventBase mobEvent = new MobEventSeaStorm("seastorm", this.group);
+			MobEventBase mobEvent = new MobEventSeaStorm("seastorm", SaltwaterMobs.group);
 			SpawnTypeBase eventSpawner = new SpawnTypeSky("seastorm")
 	            .setChance(1.0D).setBlockLimit(32).setMobLimit(3);
 	        eventSpawner.materials = new Material[] {Material.air};

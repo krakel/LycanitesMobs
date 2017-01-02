@@ -215,12 +215,12 @@ public class DemonMobs {
 
 		// ========== Set Current Group ==========
 		ObjectManager.setCurrentGroup(group);
-		ConfigBase config = ConfigBase.getConfig(group, "spawning");
+//		ConfigBase config = ConfigBase.getConfig(group, "spawning");
 
 
 		// ========== World Events ==========
         if(MobInfo.getFromName("nethersoul") != null) {
-			MobEventBase mobEvent = new MobEventHellsFury("hellsfury", this.group).setDimensions("1");
+			MobEventBase mobEvent = new MobEventHellsFury("hellsfury", DemonMobs.group).setDimensions("1");
 			SpawnTypeBase eventSpawner = new SpawnTypeSky("hellsfury")
 	            .setChance(1.0D).setBlockLimit(32).setMobLimit(5);
 	        eventSpawner.materials = new Material[] {Material.air};
@@ -236,7 +236,7 @@ public class DemonMobs {
 
 
         // ========== Boss Events ==========
-        MobEventBase mobEvent = new MobEventRahovart("rahovart", this.group).setDimensions("");
+        MobEventBase mobEvent = new MobEventRahovart("rahovart", DemonMobs.group).setDimensions("");
         MobEventManager.instance.addMobEvent(mobEvent);
 
 

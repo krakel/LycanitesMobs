@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import lycanite.lycanitesmobs.Faster;
 import lycanite.lycanitesmobs.api.entity.EntityCreatureBase;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.entity.Entity;
@@ -198,7 +199,7 @@ public class ModelCustomObj extends ModelBase {
      * @param scale Used for scale based changes during animation but not to actually apply the scale as it is applied in the render method.
      */
     public void animatePart(String partName, EntityLiving entity, float time, float distance, float loop, float lookY, float lookX, float scale) {
-    	float pi = (float)Math.PI;
+    	// float pi = (float)Math.PI;
     	float posX = 0F;
     	float posY = 0F;
     	float posZ = 0F;
@@ -364,7 +365,7 @@ public class ModelCustomObj extends ModelBase {
     		else if(bTarget < bCenter) return -90;
     	if(aTarget - aCenter == 0 && bTarget - bCenter == 0)
     		return 0;
-    	return Math.toDegrees(Math.atan2(aCenter - aTarget, bCenter - bTarget) - Math.PI / 2);
+    	return Math.toDegrees(Faster.atan2(aCenter - aTarget, bCenter - bTarget) - Math.PI / 2);
     }
     public double[] rotateToPoint(double xCenter, double yCenter, double zCenter, double xTarget, double yTarget, double zTarget) {
     	double[] rotations = new double[3];

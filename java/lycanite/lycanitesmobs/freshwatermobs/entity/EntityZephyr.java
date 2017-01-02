@@ -124,7 +124,7 @@ public class EntityZephyr extends EntityCreatureTameable implements IMob, IGroup
         // Static Aura Attack:
         if(!this.worldObj.isRemote && ++aoeAttackTick == 40) {
             aoeAttackTick = 0;
-            boolean applyEffect = this.getRNG().nextFloat() >= 0.5F;
+//            boolean applyEffect = this.getRNG().nextFloat() >= 0.5F;
             List aoeTargets = this.getNearbyEntities(EntityLivingBase.class, 4);
             for(Object entityObj : aoeTargets) {
                 EntityLivingBase target = (EntityLivingBase)entityObj;

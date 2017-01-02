@@ -6,6 +6,7 @@ import lycanite.lycanitesmobs.LycanitesMobs;
 import lycanite.lycanitesmobs.api.block.BlockBase;
 import lycanite.lycanitesmobs.junglemobs.JungleMobs;
 import lycanite.lycanitesmobs.junglemobs.entity.EntityVespidQueen;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockPistonBase;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
@@ -30,7 +31,7 @@ public class BlockPropolis extends BlockBase {
 		// Stats:
 		this.setHardness(0.6F);
 		this.setHarvestLevel("shovel", 0);
-		this.setStepSound(this.soundTypeGravel);
+		this.setStepSound(Block.soundTypeGravel);
 		this.tickRate = 100;
 		this.removeOnTick = true;
 	}

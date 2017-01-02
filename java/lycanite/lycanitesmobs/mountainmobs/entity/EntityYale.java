@@ -51,7 +51,8 @@ public class EntityYale extends EntityCreatureAgeable implements IAnimals, IGrou
 	 * Simulates a crafting instance between two dyes and uses the result dye as a mixed color, used for babies with different colored parents.
 	 */
 	private final InventoryCrafting colorMixer = new InventoryCrafting(new Container() {
-        private static final String __OBFID = "CL_00001649";
+        @SuppressWarnings( "unused")
+		private static final String __OBFID = "CL_00001649";
         public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
             return false;
         }

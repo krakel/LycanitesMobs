@@ -11,10 +11,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class RenderNone extends Render {
-	private IIcon icon;
+//	private IIcon icon;
 	public ResourceLocation texture;
-    private float scale;
-    private int renderTime = 0;
+//    private float scale;
+//    private int renderTime = 0;
     
     // ==================================================
     //                     Constructor
@@ -48,15 +48,15 @@ public class RenderNone extends Render {
     // ==================================================
     //                  Render Texture
     // ==================================================
-    private void renderTexture(Tessellator tessellator) {
-    	return;
-    }
+//    private void renderTexture(Tessellator tessellator) {
+//    	return;
+//    }
     
     
     // ==================================================
     //                    Render Icon
     // ==================================================
-    private void renderIcon(Tessellator par1Tessellator, IIcon par2Icon) {
-        return;
-    }
+//    private void renderIcon(Tessellator par1Tessellator, IIcon par2Icon) {
+//        return;
+//    }
 }

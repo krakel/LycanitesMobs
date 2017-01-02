@@ -33,7 +33,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 public class EntityGorgomite extends EntityCreatureBase implements IMob, IGroupPrey {
-	private EntityAIAttackRanged rangedAttackAI;
+//	private EntityAIAttackRanged rangedAttackAI;
 	private int gorgomiteSwarmLimit = 20;
     
     // ==================================================

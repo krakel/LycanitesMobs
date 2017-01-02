@@ -214,7 +214,7 @@ public class GUIMinion extends GuiScreen {
         		GuiButton button = (GuiButton)buttonObj;
         		
         		// Behaviour Buttons:
-        		if(button.id < this.tabButtonID) {
+        		if(button.id < GUIMinion.tabButtonID) {
 	        		if(button.id == EntityCreatureBase.GUI_COMMAND_ID.SITTING.id)
 	        			button.displayString = StatCollector.translateToLocal("gui.pet.sitting") + ": " + (this.summonSet.getSitting() ? StatCollector.translateToLocal("common.yes") : StatCollector.translateToLocal("common.no"));
 	        		
@@ -232,8 +232,8 @@ public class GUIMinion extends GuiScreen {
         		}
         		
         		// Tabs:
-        		if(button.id >= this.tabButtonID) {
-        			button.enabled = button.id - this.tabButtonID != this.editSet;
+        		if(button.id >= GUIMinion.tabButtonID) {
+        			button.enabled = button.id - GUIMinion.tabButtonID != this.editSet;
         		}
         	}
         }
@@ -247,7 +247,7 @@ public class GUIMinion extends GuiScreen {
 	protected void actionPerformed(GuiButton guiButton) {
 		if(guiButton != null) {
 			// Behaviour Button:
-			if(guiButton.id < this.tabButtonID) {
+			if(guiButton.id < GUIMinion.tabButtonID) {
 				if(guiButton.id == EntityCreatureBase.GUI_COMMAND_ID.SITTING.id)
 					this.summonSet.sitting = !this.summonSet.sitting;
 				if(guiButton.id == EntityCreatureBase.GUI_COMMAND_ID.FOLLOWING.id)
@@ -262,8 +262,8 @@ public class GUIMinion extends GuiScreen {
 			}
 			
 			// Tab Button:
-			if(guiButton.id >= this.tabButtonID) {
-				this.editSet = guiButton.id - this.tabButtonID;
+			if(guiButton.id >= GUIMinion.tabButtonID) {
+				this.editSet = guiButton.id - GUIMinion.tabButtonID;
 				this.summonSet = this.playerExt.getSummonSet(this.editSet);
 			}
 		}
@@ -279,7 +279,7 @@ public class GUIMinion extends GuiScreen {
 		this.playerExt.sendSummonSetToServer((byte)this.editSet);
 		for(Object buttonObj : this.buttonList) {
 			GuiButton button = (GuiButton)buttonObj;
-			if(button instanceof GUIButtonCreature && button.id == this.editSet + this.tabButtonID) {
+			if(button instanceof GUIButtonCreature && button.id == this.editSet + GUIMinion.tabButtonID) {
 				MobInfo mobInfo = this.playerExt.getSummonSet(this.editSet).getMobInfo();
 				((GUIButtonCreature)button).mobInfo = mobInfo;
 			}

@@ -109,7 +109,7 @@ public class BlockShadowfire extends BlockBase {
         
 		// Turn to air if no neighbor blocks can burn and this block is not on a solid block/water.
         if(!onFireFuel && !this.canNeighborBurn(world, x, y, z)) {
-            if((!world.doesBlockHaveSolidTopSurface(world, x, y - 1, z) && base != Blocks.water) || metadata > 3) {
+            if((!World.doesBlockHaveSolidTopSurface(world, x, y - 1, z) && base != Blocks.water) || metadata > 3) {
                 world.setBlockToAir(x, y, z);
                 return;
             }
@@ -158,28 +158,28 @@ public class BlockShadowfire extends BlockBase {
     }
     
     // ========== Try To Catch Block On Fire ===========
-    private void tryCatchFire(World world, int x, int y, int z, int chance, Random random, int metadata, ForgeDirection face) {
-        int j1 = 0;
-        Block block = world.getBlock(x, y, z);
-        if(block != null) {
-            j1 = 0;
-        }
-
-        if(random.nextInt(chance) < j1 / 8) {
-            if(random.nextInt(metadata + 10) < 5) {
-                int k1 = metadata + random.nextInt(5) / 4;
-
-                if(k1 > 15) {
-                    k1 = 15;
-                }
-
-                world.setBlock(x, y, z, this, k1, 3);
-            }
-            else {
-            	world.setBlockToAir(x, y, z);
-            }
-        }
-    }
+//    private void tryCatchFire(World world, int x, int y, int z, int chance, Random random, int metadata, ForgeDirection face) {
+//        int j1 = 0;
+//        Block block = world.getBlock(x, y, z);
+//        if(block != null) {
+//            j1 = 0;
+//        }
+//
+//        if(random.nextInt(chance) < j1 / 8) {
+//            if(random.nextInt(metadata + 10) < 5) {
+//                int k1 = metadata + random.nextInt(5) / 4;
+//
+//                if(k1 > 15) {
+//                    k1 = 15;
+//                }
+//
+//                world.setBlock(x, y, z, this, k1, 3);
+//            }
+//            else {
+//            	world.setBlockToAir(x, y, z);
+//            }
+//        }
+//    }
     
     // ========== Get Chance of Neighbors Encouraging Fire ==========
     public int getChanceOfNeighborsEncouragingFire(World world, int x, int y, int z) {

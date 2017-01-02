@@ -201,9 +201,9 @@ public class MobEventManager {
 	 * @return Returns a an appropriate weighted random Mob Event or null if none are available.
 	 *  **/
 	public MobEventBase getRandomWorldMobEvent(World world, ExtendedWorld worldExt) {
-		int dimensionID = 0;
-		if(world.provider != null)
-			dimensionID = world.provider.dimensionId;
+//		int dimensionID = 0;
+//		if(world.provider != null)
+//			dimensionID = world.provider.dimensionId;
 		
 		// Seasonal Events:
 		if(Utilities.isHalloween() && this.worldMobEvents.containsKey("halloween"))

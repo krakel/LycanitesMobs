@@ -3,6 +3,7 @@ package lycanite.lycanitesmobs.demonmobs.entity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import lycanite.lycanitesmobs.AssetManager;
+import lycanite.lycanitesmobs.Faster;
 import lycanite.lycanitesmobs.LycanitesMobs;
 import lycanite.lycanitesmobs.ObjectManager;
 import lycanite.lycanitesmobs.api.IGroupDemon;
@@ -274,7 +275,7 @@ public class EntityRahovart extends EntityCreatureBase implements IMob, IBossDis
                 if(this.hasAttackTarget()) {
                     double deltaX = this.getAttackTarget().posX - this.posX;
                     double deltaZ = this.getAttackTarget().posZ - this.posZ;
-                    angle = Math.atan2(deltaZ, deltaX) * 180 / Math.PI;
+                    angle = Faster.atan2(deltaZ, deltaX) * 180 / Math.PI;
                 }
                 this.hellfireWaveAttack(angle);
             }

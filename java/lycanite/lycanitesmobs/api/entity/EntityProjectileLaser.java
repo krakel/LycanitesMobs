@@ -3,6 +3,7 @@ package lycanite.lycanitesmobs.api.entity;
 import java.lang.reflect.Constructor;
 import java.util.HashSet;
 
+import lycanite.lycanitesmobs.Faster;
 import lycanite.lycanitesmobs.Utilities;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -497,13 +498,13 @@ public class EntityProjectileLaser extends EntityProjectileBase {
     		float dx = (float)(this.laserEnd.posX - this.posX);
     		float dy = (float)(this.laserEnd.posY - this.posY);
     		float dz = (float)(this.laserEnd.posZ - this.posZ);
-			angles[0] = (float)Math.toDegrees(Math.atan2(dz, dy)) - 90;
-			angles[1] = (float)Math.toDegrees(Math.atan2(dx, dz));
-			angles[2] = (float)Math.toDegrees(Math.atan2(dx, dy)) - 90;
+			angles[0] = (float)Math.toDegrees(Faster.atan2(dz, dy)) - 90;
+			angles[1] = (float)Math.toDegrees(Faster.atan2(dx, dz));
+			angles[2] = (float)Math.toDegrees(Faster.atan2(dx, dy)) - 90;
 			
 			// Distance based x/z rotation:
 			float dr = (float)Math.sqrt(dx * dx + dz * dz);
-			angles[3] = (float)Math.toDegrees(Math.atan2(dr, dy)) - 90;
+			angles[3] = (float)Math.toDegrees(Faster.atan2(dr, dy)) - 90;
 		}
     	return angles;
     }

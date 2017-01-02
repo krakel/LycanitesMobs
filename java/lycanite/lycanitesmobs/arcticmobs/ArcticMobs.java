@@ -202,13 +202,13 @@ public class ArcticMobs {
 	public void postInit(FMLPostInitializationEvent event) {
 		// ========== Set Current Group ==========
 		ObjectManager.setCurrentGroup(group);
-		ConfigBase config = ConfigBase.getConfig(group, "spawning");
+//		ConfigBase config = ConfigBase.getConfig(group, "spawning");
 
         // ========== World Generation ==========
         GameRegistry.registerWorldGenerator(new WorldGeneratorArctic(), 0);
 		
 		// ========== Mob Events ==========
-        MobEventBase mobEvent = new MobEventSubZero("subzero", this.group);
+        MobEventBase mobEvent = new MobEventSubZero("subzero", ArcticMobs.group);
         SpawnTypeBase eventSpawner = new SpawnTypeSky("subzero")
             .setChance(1.0D).setBlockLimit(32).setMobLimit(3);
         eventSpawner.materials = new Material[] {Material.air};
@@ -220,7 +220,7 @@ public class ArcticMobs {
         mobEvent.addSpawner(eventSpawner);
         MobEventManager.instance.addWorldEvent(mobEvent);
 
-        mobEvent = new MobEventWintersGrasp("wintersgrasp", this.group);
+        mobEvent = new MobEventWintersGrasp("wintersgrasp", ArcticMobs.group);
         mobEvent.minDay = 10;
         eventSpawner = new SpawnTypeLand("wintersgrasp")
                 .setChance(1.0D).setBlockLimit(32).setMobLimit(3);

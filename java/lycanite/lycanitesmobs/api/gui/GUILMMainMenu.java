@@ -112,9 +112,9 @@ public class GUILMMainMenu extends GuiScreen {
 		int buttonX =this.centerX - Math.round(buttonWidth / 2);
         int buttonXLeft = this.centerX - buttonWidth - buttonSpacing;
 		int buttonXRight = this.centerX + buttonSpacing;
-        int buttonY = this.centerY - Math.round(buttonHeight / 2);
+//        int buttonY = this.centerY - Math.round(buttonHeight / 2);
         GuiButton button;
-        MobInfo mobInfo;
+//        MobInfo mobInfo;
         int nextY = this.windowY + buttonHeight + buttonSpacing;
 
 		// Beastiary:

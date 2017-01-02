@@ -431,8 +431,8 @@ public class InventoryCreature implements IInventory {
         	if(armorStack != null) {
             	if(armorStack.getItem() instanceof ItemArmor)
 	                totalArmor += ((ItemArmor)armorStack.getItem()).damageReduceAmount;
-            	else if(this.getEquipmentGrade(armorSlot) != null && this.armorValues.containsKey(this.getEquipmentGrade(armorSlot)))
-            		totalArmor += this.armorValues.get(this.getEquipmentGrade(armorSlot));
+            	else if(this.getEquipmentGrade(armorSlot) != null && InventoryCreature.armorValues.containsKey(this.getEquipmentGrade(armorSlot)))
+            		totalArmor += InventoryCreature.armorValues.get(this.getEquipmentGrade(armorSlot));
         	}
         }
         return totalArmor;

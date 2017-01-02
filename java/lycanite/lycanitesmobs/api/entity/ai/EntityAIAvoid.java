@@ -16,9 +16,9 @@ public class EntityAIAvoid extends EntityAIBase {
     private double farSpeed = 1.0D;
     private double nearSpeed = 1.2D;
     private double farDistance = 4096.0D;
-    private double nearDistance = 49.0D;
+//    private double nearDistance = 49.0D;
     private Class targetClass;
-    private float distanceFromEntity = 6.0F;
+//    private float distanceFromEntity = 6.0F;
     private PathEntity pathEntity;
 	
 	// ==================================================
@@ -46,7 +46,7 @@ public class EntityAIAvoid extends EntityAIBase {
     	return this;
     }
     public EntityAIAvoid setNearDistance(double dist) {
-    	this.nearDistance = dist * dist;
+//    	this.nearDistance = dist * dist;
     	return this;
     }
     public EntityAIAvoid setTargetClass(Class setTargetClass) {

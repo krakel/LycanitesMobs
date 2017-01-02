@@ -96,7 +96,7 @@ public class GUIMinionSelection extends GuiScreen {
   	// ==================================================
 	protected void drawControls() {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        int buttonSpacing = 2;
+//        int buttonSpacing = 2;
         int buttonWidth = 32;
         int buttonHeight = 32;
         int buttonX = this.centerX - Math.round(buttonWidth / 2);

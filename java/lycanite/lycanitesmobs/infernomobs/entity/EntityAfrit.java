@@ -122,14 +122,14 @@ public class EntityAfrit extends EntityCreatureTameable implements IMob, IGroupF
             if(this.flightToggleTime++ >= this.flightToggleTimeMax) {
                 this.flightToggleTime = 0;
                 if(this.getRNG().nextBoolean()) {
-                	boolean solidBeneath = false;
+//                	boolean solidBeneath = false;
                 	int searchX = (int)Math.floor(this.posX);
                 	int searchY = (int)Math.floor(this.posY) + 1;
                 	int searchZ = (int)Math.floor(this.posZ);
                 	while(searchY > 0) {
                 		Block searchBlock = this.worldObj.getBlock(searchX, searchY, searchZ);
                 		if(searchBlock != null) {
-                			solidBeneath = this.worldObj.doesBlockHaveSolidTopSurface(this.worldObj, searchX, searchY, searchZ);
+//                			solidBeneath = World.doesBlockHaveSolidTopSurface(this.worldObj, searchX, searchY, searchZ);
                 			break;
                 		}
                 		searchY--;

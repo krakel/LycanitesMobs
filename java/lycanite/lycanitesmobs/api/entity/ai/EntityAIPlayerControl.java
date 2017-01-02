@@ -9,9 +9,9 @@ public class EntityAIPlayerControl extends EntityAIBase {
     private EntityCreatureRideable host;
     
     // Properties:
-    private double speed = 1.0D;
-    private double sprintSpeed = 1.5D;
-    private double flightSpeed = 1.0D;
+//    private double speed = 1.0D;
+//    private double sprintSpeed = 1.5D;
+//    private double flightSpeed = 1.0D;
     public boolean enabled = true;
 	
 	// ==================================================
@@ -27,17 +27,17 @@ public class EntityAIPlayerControl extends EntityAIBase {
   	//                  Set Properties
   	// ==================================================
     public EntityAIPlayerControl setSpeed(double set) {
-    	this.speed = set;
+//    	this.speed = set;
     	return this;
     }
 
     public EntityAIPlayerControl setSprintSpeed(double set) {
-    	this.sprintSpeed = set;
+//    	this.sprintSpeed = set;
     	return this;
     }
 
     public EntityAIPlayerControl setFlightSpeed(double set) {
-    	this.flightSpeed = set;
+//    	this.flightSpeed = set;
     	return this;
     }
     

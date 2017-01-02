@@ -241,7 +241,7 @@ public class GUIBaseManager extends GuiScreen {
         int buttonX = this.windowX + 6;
         int buttonY = this.windowY;
 
-		this.buttonList.add(new GUITabMain(this.tabButtonID, buttonX, buttonY - 24));
+		this.buttonList.add(new GUITabMain(GUIBaseManager.tabButtonID, buttonX, buttonY - 24));
 
 		buttonX = this.centerX + buttonSpacing;
 		int buttonXRight = buttonX + buttonWidth + buttonSpacing;
@@ -428,7 +428,7 @@ public class GUIBaseManager extends GuiScreen {
         this.playerExt.sendSummonSetToServer((byte)this.editSet);
         for(Object buttonObj : this.buttonList) {
             GuiButton button = (GuiButton)buttonObj;
-            if(button instanceof GUIButtonCreature && button.id == this.editSet + this.tabButtonID) {
+            if(button instanceof GUIButtonCreature && button.id == this.editSet + GUIBaseManager.tabButtonID) {
                 MobInfo mobInfo = this.playerExt.getSummonSet(this.editSet).getMobInfo();
                 ((GUIButtonCreature)button).mobInfo = mobInfo;
             }

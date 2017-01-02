@@ -16,7 +16,7 @@ public abstract class EntityCreatureAgeable extends EntityCreatureBase {
     private float scaledHeight;
     
     // Targets:
-    private EntityCreatureAgeable breedingTarget, breedingTargetPrev;
+    private EntityCreatureAgeable breedingTarget; //, breedingTargetPrev;
     public boolean hasBreedingTarget = false;
     
     // Growth:
@@ -27,7 +27,7 @@ public abstract class EntityCreatureAgeable extends EntityCreatureBase {
     // Breeding:
     public int loveTime;
     private int loveTimeMax = 600;
-    private int breedingTime;
+//    private int breedingTime;
     public int breedingCooldown = 6000;
     
     public boolean hasBeenFarmed = false;
@@ -133,8 +133,8 @@ public abstract class EntityCreatureAgeable extends EntityCreatureBase {
 	            }
             }
         }
-        else
-            this.breedingTime = 0;
+//        else
+//            this.breedingTime = 0;
     }
     
     // ========== AI Update ==========
@@ -329,7 +329,7 @@ public abstract class EntityCreatureAgeable extends EntityCreatureBase {
         this.setGrowingAge(this.breedingCooldown);
         this.setBreedingTarget(null);
         this.loveTime = 0;
-        this.breedingTime = 0;
+//        this.breedingTime = 0;
 	}
 	
 	

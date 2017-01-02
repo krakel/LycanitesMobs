@@ -28,7 +28,7 @@ public class MobEventBlackPlague extends MobEventBase {
     	int targetTime = 20000;
     	
     	long excessTime = currentTime % dayTime;
-    	int addedTime = dayTime;
+//    	int addedTime = dayTime;
     	if(excessTime > targetTime) {
     		targetTime += dayTime;
     	}

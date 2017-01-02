@@ -163,11 +163,11 @@ public class PlainsMobs {
 	public void postInit(FMLPostInitializationEvent event) {
 		// ========== Set Current Group ==========
 		ObjectManager.setCurrentGroup(group);
-		ConfigBase config = ConfigBase.getConfig(group, "spawning");
+//		ConfigBase config = ConfigBase.getConfig(group, "spawning");
 		
 		// ========== Mob Events ==========
         if(MobInfo.getFromName("roc") != null) {
-			MobEventBase mobEvent = new MobEventWindStorm("windstorm", this.group);
+			MobEventBase mobEvent = new MobEventWindStorm("windstorm", PlainsMobs.group);
 			SpawnTypeBase eventSpawner = new SpawnTypeSky("windstorm")
 	            .setChance(1.0D).setBlockLimit(32).setMobLimit(3);
 	        eventSpawner.materials = new Material[] {Material.air};

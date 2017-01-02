@@ -16,7 +16,7 @@ public class EntityAIEatBlock extends EntityAIBase {
     private Material[] materials = new Material[0];
     private Block replaceBlock = Blocks.air;
     private int eatTime = 40;
-    private int eatTimeMax = 40;
+//    private int eatTimeMax = 40;
 	
 	// ==================================================
  	//                    Constructor
@@ -46,7 +46,7 @@ public class EntityAIEatBlock extends EntityAIBase {
      }
 
      public EntityAIEatBlock setEatTime(int setTime) {
-    	this.eatTimeMax = setTime;
+//    	this.eatTimeMax = setTime;
      	return this;
      }
  	

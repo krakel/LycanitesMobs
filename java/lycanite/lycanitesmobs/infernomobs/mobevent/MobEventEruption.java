@@ -42,7 +42,7 @@ public class MobEventEruption extends MobEventBase {
 		super.onSpawn(entity);
 
         List<EntityProjectileBase> projectiles = new ArrayList<EntityProjectileBase>();
-        int rapidTime = 20;
+//        int rapidTime = 20;
 
         EntityProjectileBase projectileEntry = new EntityMagma(entity.worldObj, entity);
         projectiles.add(projectileEntry);

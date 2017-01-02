@@ -224,9 +224,9 @@ public class EventListener {
 
         EntityLivingBase damagedEntity = event.entityLiving;
 
-        EntityDamageSource entityDamageSource = null;
-        if(event.source instanceof EntityDamageSource)
-            entityDamageSource = (EntityDamageSource)event.source;
+//        EntityDamageSource entityDamageSource = null;
+//        if(event.source instanceof EntityDamageSource)
+//            entityDamageSource = (EntityDamageSource)event.source;
 
 //        Entity damagingEntity = null;
 //        if(entityDamageSource != null)

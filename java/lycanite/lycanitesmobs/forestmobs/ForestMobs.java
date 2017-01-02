@@ -165,11 +165,11 @@ public class ForestMobs {
 	public void postInit(FMLPostInitializationEvent event) {
 		// ========== Set Current Group ==========
 		ObjectManager.setCurrentGroup(group);
-		ConfigBase config = ConfigBase.getConfig(group, "spawning");
+//		ConfigBase config = ConfigBase.getConfig(group, "spawning");
 		
 		// ========== Mob Events ==========
 		// Rot Riot:
-		MobEventBase bamstormEvent = new MobEventRootRiot("rootriot", this.group);
+		MobEventBase bamstormEvent = new MobEventRootRiot("rootriot", ForestMobs.group);
         
 		SpawnTypeBase bamLandSpawner = new SpawnTypeLand("rootriot_land")
             .setChance(1.0D).setBlockLimit(32).setMobLimit(3);

@@ -204,13 +204,13 @@ public class JungleMobs {
 	public void postInit(FMLPostInitializationEvent event) {
 		// ========== Set Current Group ==========
 		ObjectManager.setCurrentGroup(group);
-		ConfigBase config = ConfigBase.getConfig(group, "spawning");
+//		ConfigBase config = ConfigBase.getConfig(group, "spawning");
 		
 		
 		// ========== Mob Events ==========
 		// Poop Party:
         if(MobInfo.getFromName("conba") != null) {
-			MobEventBase mobEvent = new MobEventPoopParty("poopparty", this.group);
+			MobEventBase mobEvent = new MobEventPoopParty("poopparty", JungleMobs.group);
 			SpawnTypeBase eventSpawner = new SpawnTypeLand("poopparty")
 	            .setChance(1.0D).setBlockLimit(32).setMobLimit(3);
 	        eventSpawner.materials = new Material[] {Material.air};
@@ -224,7 +224,7 @@ public class JungleMobs {
         }
 		
 	     // The Swarm:
-		MobEventBase theSwarmEvent = new MobEventTheSwarm("theswarm", this.group);
+		MobEventBase theSwarmEvent = new MobEventTheSwarm("theswarm", JungleMobs.group);
 		theSwarmEvent.minDay = 10;
 	     
 		SpawnTypeBase theSwarmLandSpawner = new SpawnTypeLand("theswarm_land")

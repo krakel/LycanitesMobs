@@ -9,7 +9,7 @@ public class EntityAITargetMasterAttack extends EntityAIBase {
 	private EntityCreatureBase host;
 	
 	// Properties:
-    private boolean tameTargeting = false;
+//    private boolean tameTargeting = false;
     
     // ==================================================
   	//                    Constructor
@@ -24,7 +24,7 @@ public class EntityAITargetMasterAttack extends EntityAIBase {
   	//                  Set Properties
   	// ==================================================
     public EntityAITargetMasterAttack setTameTargetting(boolean setTargetting) {
-    	this.tameTargeting = setTargetting;
+//    	this.tameTargeting = setTargetting;
     	return this;
     }
 

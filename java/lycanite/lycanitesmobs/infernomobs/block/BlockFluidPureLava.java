@@ -50,7 +50,7 @@ public class BlockFluidPureLava extends BlockFluidClassic {
 		
 		// Renewable Fluid:
 		if(block == this) {
-			BlockFluidClassic fluidBlock = (BlockFluidClassic)block;
+//			BlockFluidClassic fluidBlock = (BlockFluidClassic)block;
 			if(world.getBlockMetadata(x, y, z) != 0) {
 				byte otherSourceBlocks = 0;
 				ArrayList<int[]> adjBlockCoords = new ArrayList<int[]>();
@@ -113,7 +113,7 @@ public class BlockFluidPureLava extends BlockFluidClassic {
     @Override
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(World world, int x, int y, int z, Random random) {
-    	int l;
+//    	int l;
         float f; 
         float f1;
         float f2;

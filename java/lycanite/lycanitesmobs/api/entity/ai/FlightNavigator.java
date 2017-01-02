@@ -1,5 +1,6 @@
 package lycanite.lycanitesmobs.api.entity.ai;
 
+import lycanite.lycanitesmobs.Faster;
 import lycanite.lycanitesmobs.api.entity.EntityCreatureBase;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -113,7 +114,7 @@ public class FlightNavigator {
 		this.host.motionX += ((Math.signum(dirX) * speed - this.host.motionX) * 0.10000000149011612D*0.3D) * speedModifier;
 		this.host.motionY += ((Math.signum(dirY) * speed - this.host.motionY) * 0.10000000149011612D*0.3D) * speedModifier;
 		this.host.motionZ += ((Math.signum(dirZ) * speed - this.host.motionZ) * 0.10000000149011612D*0.3D) * speedModifier;
-		float fullAngle = (float)(Math.atan2(this.host.motionZ, this.host.motionX) * 180.0D / Math.PI) - 90.0F;
+		float fullAngle = (float)(Faster.atan2(this.host.motionZ, this.host.motionX) * 180.0D / Math.PI) - 90.0F;
 		float angle = MathHelper.wrapAngleTo180_float(fullAngle - this.host.rotationYaw);
 		this.host.moveForward = 0.5F;
 		if(this.faceMovement && this.host.getAttackTarget() != null && (this.host.motionX > 0.025F || this.host.motionZ > 0.025F))
@@ -182,7 +183,7 @@ public class FlightNavigator {
     protected void adjustRotationToWaypoint() {		
 		double distX = targetPosition.posX - this.host.posX;
 		double distZ = targetPosition.posZ - this.host.posZ;
-		float fullAngle = (float)(Math.atan2(distZ, distX) * 180.0D / Math.PI);// - 90.0F;
+		float fullAngle = (float)(Faster.atan2(distZ, distX) * 180.0D / Math.PI);// - 90.0F;
 		float angle = MathHelper.wrapAngleTo180_float(fullAngle - this.host.rotationYaw);
 		if(angle > 30.0F) angle = 30.0F;
 		if(angle < -30.0F) angle = -30.0F;
@@ -193,7 +194,7 @@ public class FlightNavigator {
     public void adjustRotationToTarget(ChunkCoordinates target) {
 		double distX = target.posX - this.host.posX;
 		double distZ = target.posZ - this.host.posZ;
-		float fullAngle = (float)(Math.atan2(distZ, distX) * 180.0D / Math.PI) - 90.0F;
+		float fullAngle = (float)(Faster.atan2(distZ, distX) * 180.0D / Math.PI) - 90.0F;
 		float angle = MathHelper.wrapAngleTo180_float(fullAngle - this.host.rotationYaw);
 		this.host.rotationYaw += angle; 
     }
